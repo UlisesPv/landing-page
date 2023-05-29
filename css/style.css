@@ -178,4 +178,13 @@ body{
     h2.title{
     margin-top: 20px;
     }
+    .footer-container{
+        height: 100%;
+    }
+    .footer-nav{
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+       
+    }
 }
