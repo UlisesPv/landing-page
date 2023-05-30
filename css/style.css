@@ -3,9 +3,12 @@
 }
 body{
     margin: 0;
+    position: relative;
+    height: 100vh;
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
+    border: 2px solid red;
 }
 .header-container{
     position: relative;
@@ -15,39 +18,41 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid green;
 }
 .nav-container{
     background-color: #734100;
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
+    height: 100%;
+    border: 1px solid #fff;
 }
 .ul-container{
     display: flex;
-    width: 70%;
+    width: 90%;
     padding: 0;
     margin-top:0;
     margin-bottom: 0;
-    height: 50px;
+    height: 100%;
     list-style: none;
     justify-content: right;
     align-items: center;
+    border: 1px solid green;
 }
 .list-item{
     float: left;
-    padding-right: 1rem;
-    width: 25%;
+    padding-right: 1.2rem;
     text-align: center;
 }
 .ul-logo{
-    justify-content: left;
-    width: 30%;
+    justify-content: right;
+    width: 10%;
 }
 .list-item__logo{
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
 }
 .list-item__logo::before{
     content: " ";
@@ -65,7 +70,7 @@ body{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 700px;
+    height: 500px;
     color: #734100;
 }
 .card-items{
@@ -102,6 +107,10 @@ body{
 }
 .footer-container{
     display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    text-align: center;
     width: 100%;
     height: 150px;
     margin-top: 0;
@@ -112,7 +121,7 @@ body{
 .footer-nav{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;;
     align-items: center;
     list-style: none;
     margin-bottom: 0;
@@ -127,7 +136,7 @@ body{
 /* Media Query*/
 @media only screen and (max-width: 600px) {
     body {
-       position: relative;
+       height: auto;
        color: #fff;
     }
     .header-container{
@@ -137,7 +146,6 @@ body{
         font-weight: 900;
     }
     .nav-container{
-        position: static;
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
@@ -161,7 +169,7 @@ body{
     }
     .list-item__logo{
         margin-top: 20px;
-        padding-right: 2rem;
+        /* padding-right: 2rem; */
     }
     .list-item__logo::before{
         width:6rem;
@@ -176,15 +184,19 @@ body{
         color: #fff;
     }
     h2.title{
-    margin-top: 20px;
+        margin-top: 20px;
     }
     .footer-container{
-        height: 100%;
+        height: auto;
+        position: static;
     }
     .footer-nav{
         flex-direction: column;
-        padding-top: 10px;
         padding-bottom: 10px;
-       
+        align-items: normal;
+    }
+    .footer-list{
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
